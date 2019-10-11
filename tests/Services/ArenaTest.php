@@ -3,7 +3,7 @@
 namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use App\Services\Arena;
+use App\Services\ArenaService;
 
 class ArenaTest extends WebTestCase
 {
@@ -25,7 +25,7 @@ class ArenaTest extends WebTestCase
         $knight = $this->em->getRepository('App:Knight')->find(1);
         $knight2 = $this->em->getRepository('App:Knight')->find(2);
 
-        $result = (new Arena())->fight($knight, $knight2);
+        $result = (new ArenaService())->fight($knight, $knight2);
 
         $this->assertEquals($result, -1);
     }

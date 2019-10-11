@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\MappedSuperclass
  */
-abstract class Human
+abstract class AbstractHuman
 {
     /**
      * @var string
